@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--- Basic Page Needs  -->
+    <meta charset="utf-8">
+    <title>Teamwork Contribution(Student)</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="keywords" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Mobile Specific Meta  -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!-- CSS -->
+    <link rel="stylesheet" href="static/Student/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static/Student/css/jquery-ui.css">
+    <link rel="stylesheet" href="static/Student/css/all.min.css">
+    <link rel="stylesheet" href="static/Student/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="static/Student/css/animate.css">
+    <link rel="stylesheet" href="static/Student/css/stellarnav.min.css">
+    <link rel="stylesheet" href="static/Student/css/magnific-popup.css">
+    <link rel="stylesheet" href="static/Student/fonts/stylesheet.css">
+    <link rel="stylesheet" href="static/Student/css/style.css">
+    <link rel="stylesheet" href="static/Student/css/responsive.css">
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/png" href="static/Student/img/favicon.ico">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+</head>
+
+<body>
+    <div id="preloader"></div>
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 col-sm-4 col-7">
+                    <div class="main-menu stellarnav">
+                        <ul>
+                            <li>&nbsp;&nbsp;&nbsp;</li>
+                            <li>Student: {{StudentName}}</li>
+                            <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+                            <li>Student ID: {{Stu_ID}}</li>
+                            <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+                            <li>Course ID: {{CourseID}}</li>
+                            <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-sm-4 col-12 d-none d-sm-block">
+                    <div class="lets-chat">
+                        <a href="./logout" class="link btn-style-1">Logout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="hero-area">
+        <div class="hero-element-1"><img src="static/Student/img/home1/hero-element-1.png" alt=""></div>
+        <div class="hero-element-2"><img src="static/Student/img/home1/hero-element-2.png" alt=""></div>
+        <div class="hero-element-3"><img src="static/Student/img/home1/hero-element-3.png" alt=""></div>
+        <div class="hero-element-4"><img src="static/Student/img/home1/hero-element-4.png" alt=""></div>
+        <div class="hero-banner"><img src="static/Student/img/home1/team06.png" alt=""></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 col-12">
+                    <div class="hero-content">
+                        <h3 class="intro">Welcome</h3>
+                        <h2 class="title">Student</h2></br></br>
+                        <a class="desg" style="font-size: 50px;color:gold"><span class="icon"><i class="far fa-user-graduate"></i></span> {{StudentName}}</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    <section class="social-area">
+        <div class="container">            
+            <div class="row">
+                <div class="col-lg-4 col-sm-6 col-12">
+                    <div class="single-social">
+                        <form action="/Evaluate" method="POST">
+                            <!-- 三项通用数据传递 -->
+                            <input type="hidden" name="StudentName" value={{StudentName}}>
+                            <input type="hidden" name="CourseID" value={{CourseID}}>
+                            <input type="hidden" name="Stu_ID" value={{Stu_ID}}>
+                            <!-- 以上 -->
+                            <button type="submit" style="color:white;font-size:20px;background:transparent;border-width:0px;outline:none;"><b>Evaluate leader</b></button>
+                        </form>
+                        <span class="icon"><i class="far fa-surprise"></i></span>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 col-12">
+                    <div class="single-social">
+                        <form action="/vote" method="POST">
+                            <!-- 三项通用数据传递 -->
+                            <input type="hidden" name="StudentName" value={{StudentName}}>
+                            <input type="hidden" name="CourseID" value={{CourseID}}>
+                            <input type="hidden" name="Stu_ID" value={{Stu_ID}}>
+                            <!-- 以上 -->
+                            <button type="submit" style="color:white;font-size:20px;background:transparent;border-width:0px;outline:none;"><b>Vote Leader</b></button>
+                        </form>
+                        <span class="icon"><i class="far far fa-vote-yea"></i></span>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 col-12">
+                    <div class="single-social">
+                        <form action="/ChooseMember" method="POST">
+                            <!-- 三项通用数据传递 -->
+                            <input type="hidden" name="StudentName" value={{StudentName}}>
+                            <input type="hidden" name="CourseID" value={{CourseID}}>
+                            <input type="hidden" name="Stu_ID" value={{Stu_ID}}>
+                            <!-- 以上 -->
+                            <button type="submit" style="color:white;font-size:20px;background:transparent;border-width:0px;outline:none;"><b>Choose Team Member</b></button>
+                        </form>
+                        <span class="icon"><i class="far fa-user-friends"></i></span>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 col-12">
+                    <div class="single-social">
+                        <form action="/ChangePassword" method="POST">
+                            <!-- 三项通用数据传递 -->
+                            <input type="hidden" name="StudentName" value={{StudentName}}>
+                            <input type="hidden" name="CourseID" value={{CourseID}}>
+                            <input type="hidden" name="Stu_ID" value={{Stu_ID}}>
+                            <!-- 以上 -->
+                            <button type="submit" style="color:white;font-size:20px;background:transparent;border-width:0px;outline:none;"><b>Change Password</b></button>
+                        </form>
+                        <span class="icon"><i class="far fa-unlock-alt"></i></span>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 col-12">
+                    <div class="single-social">
+                        <form action="/SetCtr" method="POST">
+                            <!-- 三项通用数据传递 -->
+                            <input type="hidden" name="StudentName" value={{StudentName}}>
+                            <input type="hidden" name="CourseID" value={{CourseID}}>
+                            <input type="hidden" name="Stu_ID" value={{Stu_ID}}>
+                            <!-- 以上 -->
+                            <button type="submit" style="color:white;font-size:20px;background:transparent;border-width:0px;outline:none;"><b>Set Contribution</b></button>
+                        </form>
+                        <span class="icon"><i class="far fa-file-contract"></i></span>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 col-12">
+                    <div class="single-social">
+                        <form action="/DisplayTeam" method="POST">
+                            <!-- 三项通用数据传递 -->
+                            <input type="hidden" name="StudentName" value={{StudentName}}>
+                            <input type="hidden" name="CourseID" value={{CourseID}}>
+                            <input type="hidden" name="Stu_ID" value={{Stu_ID}}>
+                            <!-- 以上 -->
+                            <button type="submit" style="color:white;font-size:20px;background:transparent;border-width:0px;outline:none;"><b>Display Team</b></button>
+                        </form>
+                        <span class="icon"><i class="far fa-users"></i></span>
+                    </div>
+                </div>                
+            </div>
+        </div>
+    </section>
+    
+    <!-- Scripts -->
+    <script src="static/Student/js/jquery-3.3.1.min.js"></script>
+    <script src="static/Student/js/jquery-ui.js"></script>
+    <script src="static/Student/js/owl.carousel.min.js"></script>
+    <script src="static/Student/js/jquery.counterup.min.js"></script>
+    <script src="static/Student/js/countdown.js"></script>
+    <script src="static/Student/js/stellarnav.min.js"></script>
+    <script src="static/Student/js/imagesloaded.pkgd.min.js"></script>
+    <script src="static/Student/js/isotope.pkgd.min.js"></script>
+    <script src="static/Student/js/jquery.magnific-popup.min.js"></script>
+    <script src="static/Student/js/jquery.scrollUp.js"></script>
+    <script src="static/Student/js/jquery.waypoints.min.js"></script>
+    <script src="static/Student/js/popper.min.js"></script>
+    <script src="static/Student/js/bootstrap.min.js"></script>
+    <script src="static/Student/js/theme.js"></script>
+</body>
+
+</html>

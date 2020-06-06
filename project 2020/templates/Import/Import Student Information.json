@@ -1,0 +1,41 @@
+{
+    "Student": [
+        {
+            "Stu_Name":"qwr",
+            "Stu_ID": 1730022222,
+            "email": "1730022222@mail.uic.edu.hk",
+            "GPA": 2,
+            "Password": 123456,
+            "TeamNo": 1,
+            "CourseID":1003
+        },
+        {
+            "Stu_Name":"tyu",
+            "Stu_ID": 1730033333,
+            "email": "1730033333@mail.uic.edu.hk",
+            "GPA": 2,
+            "Password": 123456,
+            "TeamNo": 1,
+            "CourseID":1003
+        },
+        {
+            "Stu_Name":"iop",
+            "Stu_ID": 173004444,
+            "email": "173004444@mail.uic.edu.hk",
+            "GPA": 2,
+            "Password": 123456,
+            "TeamNo": 1,
+            "CourseID":1003
+        },
+        {
+            "Stu_Name":"asd",
+            "Stu_ID": 173005555,
+            "email": "173005555@mail.uic.edu.hk",
+            "GPA": 2,
+            "Password": 123456,
+            "TeamNo": 1,
+            "CourseID":1003
+        }
+        
+    ]
+}

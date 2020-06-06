@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--- Basic Page Needs  -->
+    <meta charset="utf-8">
+    <title>Generate Account</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="keywords" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Mobile Specific Meta  -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!-- CSS -->
+    <link rel="stylesheet" href="static/Generate/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static/Generate/css/jquery-ui.css">
+    <link rel="stylesheet" href="static/Generate/css/all.min.css">
+    <link rel="stylesheet" href="static/Generate/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="static/Generate/css/animate.css">
+    <link rel="stylesheet" href="static/Generate/css/stellarnav.min.css">
+    <link rel="stylesheet" href="static/Generate/css/magnific-popup.css">
+    <link rel="stylesheet" href="static/Generate/fonts/stylesheet.css">
+    <link rel="stylesheet" href="static/Generate/css/style.css">
+    <link rel="stylesheet" href="static/Generate/css/responsive.css">
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/png" href="static/Generate/img/favicon.ico">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+</head>
+
+<body>
+    <div id="preloader"></div>
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 col-sm-4 col-7">
+                    <div class="main-menu stellarnav">
+                        <ul>
+                            <li>&nbsp;&nbsp;&nbsp;</li>
+                            <li>Teacher: {{teacherName}}</li>
+                            <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+                            <li>Course ID: {{CourseID}}</li>
+                            <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+                            <li>Course Name: {{CourseName}}</li>
+                            <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>                                                                
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-sm-4 col-12 d-none d-sm-block">
+                    <div class="lets-chat">
+                        <a href="./logout" class="link btn-style-1">Logout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <section class="innerpage-hero-area">
+        <div class="container">
+            
+                <div class="row">
+                    <div class="col-lg-9 offset-lg-1 col-12">
+                        
+                        <div class="innerpage-hero-content">
+                            <h2 class="title">Please input student's information:</h2></br></br>
+                            <a style="font-size: 20px;color:red">{{message}}</a></br></br>
+                        </div>
+                    </div>
+                </div>
+                    </br>
+                <form method="post" action="/GAccount">
+                    <div class="row">
+                        <div class="col-lg-4 offset-lg-2 col-12">
+                                
+                                <div class="leave-comment-input-box1">
+                                    <p class="generate-information">Name:</p>
+                                    <input type="text" name="Name" class="btn-style-10" >
+                                </div>
+                                <div class="leave-comment-input-box1">
+                                    <p class="generate-information">ID:</p>
+                                    <input type="text" name="ID" class="btn-style-10" onkeyup="this.value=this.value.replace(/\D/g,'')">
+                                </div>
+                                <div class="leave-comment-input-box1">
+                                    <p class="generate-information">Email:</p>
+                                    <input type="text" name="Email" class="btn-style-10" >
+                                </div>
+                                <div class="leave-comment-input-box1">
+                                    <p class="generate-information">Initial password:</p>
+                                    <input type="text" name="Initial password" class="btn-style-10" onkeyup="this.value=this.value.replace(/\D/g,'')">
+                                </div>
+								<div class="leave-comment-input-box1">
+                                    <p class="generate-information">GPA:</p>
+                                    <input type="text" name="GPA" class="btn-style-10" >
+                                </div>
+                            
+                        </div>
+                        
+                    </div>  
+                    </br></br>
+                    <div class="row">
+                        <div class="col-lg-4 offset-lg-2 col-12">
+                                <!-- 三项通用数据传递 -->
+                                <input type="hidden" name="teacherName" value={{teacherName}}>
+                                <input type="hidden" name="CourseID" value={{CourseID}}>
+                                <input type="hidden" name="CourseName" value={{CourseName}}>
+                                <!-- 以上 -->
+                                <button type="submit" class="btn-style-1 offset-lg-4">Generate account</button></div></br></br>
+                            </form>
+                            <form action="/teacher" method="POST">
+                                <!-- 三项通用数据传递 -->
+                                <input type="hidden" name="teacherName" value={{teacherName}}>
+                                <input type="hidden" name="CourseID" value={{CourseID}}>
+                                <input type="hidden" name="CourseName" value={{CourseName}}>
+                                <!-- 以上 -->
+                                <button type="submit" class="btn-style-1 offset-lg-4">Back</button>
+                            </form>
+                        </div>				
+                    </div>
+        </div>
+    </section>
+
+    <!-- Scripts -->
+    <script src="static/Generate/js/jquery-3.3.1.min.js"></script>
+    <script src="static/Generate/js/jquery-ui.js"></script>
+    <script src="static/Generate/js/owl.carousel.min.js"></script>
+    <script src="static/Generate/js/jquery.counterup.min.js"></script>
+    <script src="static/Generate/js/countdown.js"></script>
+    <script src="static/Generate/js/stellarnav.min.js"></script>
+    <script src="static/Generate/js/imagesloaded.pkgd.min.js"></script>
+    <script src="static/Generate/js/isotope.pkgd.min.js"></script>
+    <script src="static/Generate/js/jquery.magnific-popup.min.js"></script>
+    <script src="static/Generate/js/jquery.scrollUp.js"></script>
+    <script src="static/Generate/js/jquery.waypoints.min.js"></script>
+    <script src="static/Generate/js/popper.min.js"></script>
+    <script src="static/Generate/js/bootstrap.min.js"></script>
+    <script src="static/Generate/js/theme.js"></script>
+</body>
+
+</html>

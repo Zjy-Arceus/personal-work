@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--- Basic Page Needs  -->
+    <meta charset="utf-8">
+    <title>Add New Item</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="keywords" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Mobile Specific Meta  -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!-- CSS -->
+    <link rel="stylesheet" href="../static/edit/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../static/edit/css/jquery-ui.css">
+    <link rel="stylesheet" href="../static/edit/css/all.min.css">
+    <link rel="stylesheet" href="../static/edit/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../static/edit/css/animate.css">
+    <link rel="stylesheet" href="../static/edit/css/stellarnav.min.css">
+    <link rel="stylesheet" href="../static/edit/css/magnific-popup.css">
+    <link rel="stylesheet" href="../static/edit/fonts/stylesheet.css">
+    <link rel="stylesheet" href="../static/edit/css/style.css">
+    <link rel="stylesheet" href="../static/edit/css/responsive.css">
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/png" href="../static/edit/img/favicon.ico">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+</head>
+
+<body>
+    <div id="preloader"></div>
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 col-sm-4 col-7">
+                    <div class="main-menu stellarnav">
+                        <ul>
+                            <li>&nbsp;&nbsp;&nbsp;</li>
+                            <li>Teacher: {{teacherName}}</li>
+                            <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+                            <li>Course ID: {{CourseID}}</li>
+                            <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+                            <li>Course Name: {{CourseName}}</li>
+                            <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>                                                                
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-sm-4 col-12 d-none d-sm-block">
+                    <div class="lets-chat">
+                        <a href="./logout" class="link btn-style-1">Logout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="innerpage-hero-area">
+        <div class="container">
+            <div class="row">
+				<div class="col-lg-9 offset-lg-3 col-12">
+                    <div class="innerpage-hero-content">
+						<h3 style="color:red;position:relative;left:50px">{{ message }}</h3></br></br>
+                        <h2 class="title">Add a new item:</h2>
+                    </div>
+                </div>
+			</div>
+				</br>
+			<form action="/addNewItem" method="post">
+			<div class="row">
+				<div class="col-lg-9 offset-lg-2 col-12">
+					<div class="leave-comment-input-box1">
+						<p class="generate-information">Title:</p>
+						<input type="text" class="btn-style-10" name="title">
+					</div>
+					<div class="leave-comment-input-box1">
+						<p class="generate-information">Percentage:(needs to be float number)</p>
+						<input type="text" class="btn-style-10" name="percentage">
+					</div>
+				</div>
+			</div>               
+            </div>
+			</br></br>
+			<div class="row">
+				<div class="col-lg-5 offset-lg-4 col-12">
+                    <button type="submit" class="btn-style-1">Save</button>
+                    <!-- 三项通用数据传递 -->
+                    <input type="hidden" name="teacherName" value={{teacherName}}>
+                    <input type="hidden" name="CourseID" value={{CourseID}}>
+                    <input type="hidden" name="CourseName" value={{CourseName}}>
+                    <!-- 以上 -->
+                </form>
+                <form action="/edit" method="POST">
+                    <!-- 三项通用数据传递 -->
+                    <input type="hidden" name="teacherName" value={{teacherName}}>
+                    <input type="hidden" name="CourseID" value={{CourseID}}>
+                    <input type="hidden" name="CourseName" value={{CourseName}}>
+                    <!-- 以上 -->
+                    <button type="submit" class="btn-style-1 offset-lg-4">Back</button>
+                </form>
+				</div>				
+            </div>
+			
+        </div>
+    </section>
+
+    <!-- Scripts -->
+    <script src="../static/edit/js/jquery-3.3.1.min.js"></script>
+    <script src="../static/edit/js/jquery-ui.js"></script>
+    <script src="../static/edit/js/owl.carousel.min.js"></script>
+    <script src="../static/edit/js/jquery.counterup.min.js"></script>
+    <script src="../static/edit/js/countdown.js"></script>
+    <script src="../static/edit/js/stellarnav.min.js"></script>
+    <script src="../static/edit/js/imagesloaded.pkgd.min.js"></script>
+    <script src="../static/edit/js/isotope.pkgd.min.js"></script>
+    <script src="../static/edit/js/jquery.magnific-popup.min.js"></script>
+    <script src="../static/edit/js/jquery.scrollUp.js"></script>
+    <script src="../static/edit/js/jquery.waypoints.min.js"></script>
+    <script src="../static/edit/js/popper.min.js"></script>
+    <script src="../static/edit/js/bootstrap.min.js"></script>
+    <script src="../static/edit/js/theme.js"></script>
+</body>
+
+</html>

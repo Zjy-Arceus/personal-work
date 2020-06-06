@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--- Basic Page Needs  -->
+    <meta charset="utf-8">
+    <title>GPA Floating</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="keywords" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Mobile Specific Meta  -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!-- CSS -->
+    <link rel="stylesheet" href="static/Form/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static/Form/css/jquery-ui.css">
+    <link rel="stylesheet" href="static/Form/css/all.min.css">
+    <link rel="stylesheet" href="static/Form/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="static/Form/css/animate.css">
+    <link rel="stylesheet" href="static/Form/css/stellarnav.min.css">
+    <link rel="stylesheet" href="static/Form/css/magnific-popup.css">
+    <link rel="stylesheet" href="static/Form/fonts/stylesheet.css">
+    <link rel="stylesheet" href="static/Form/css/style.css">
+    <link rel="stylesheet" href="static/Form/css/responsive.css">
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/png" href="static/Form/img/favicon.ico">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+</head>
+
+<body>
+    <div id="preloader"></div>
+    
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 col-sm-4 col-7">
+                    <div class="main-menu stellarnav">
+                        <ul>
+                            <li>&nbsp;&nbsp;&nbsp;</li>
+                            <li>Teacher: {{teacherName}}</li>
+                            <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+                            <li>Course ID: {{CourseID}}</li>
+                            <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+                            <li>Course Name: {{CourseName}}</li>
+                            <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>                                                                
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-sm-4 col-12 d-none d-sm-block">
+                    <div class="lets-chat">
+                        <a href="./logout" class="link btn-style-1">Logout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="innerpage-hero-area">
+        <div class="container">
+            <div class="row">
+				<div class="col-lg-9 offset-lg-1 col-12">
+                    <div class="innerpage-hero-content">
+                        <h2 class="title">The average GPA is: {{AverageGPA}}</h2>
+                    </div>
+                </div>
+			</div>
+			</br></br>
+			<div class="row">
+				<div class="col-lg-9 offset-lg-0 col-12">
+					<div class="leave-comment-input-box1">
+						<span style="font-size:24px">Set floating GPA:
+						<input type="text" class="btn-style-10"></span></br></br></br>
+                        <table style="width:100%;text-align:center">
+                        <td>
+                            <form action="/CancelGPA" method="POST">
+                                <!-- 三项通用数据传递 -->
+                                <input type="hidden" name="teacherName" value={{teacherName}}>
+                                <input type="hidden" name="CourseID" value={{CourseID}}>
+                                <input type="hidden" name="CourseName" value={{CourseName}}>
+                                <!-- 以上 -->
+                                <button type="submit" class="btn-style-1 offset-lg-4">Confirm</button>
+                            </form>
+                        </td>
+                        <td>
+                            <form action="/CancelGPA" method="POST">
+                                <!-- 三项通用数据传递 -->
+                                <input type="hidden" name="teacherName" value={{teacherName}}>
+                                <input type="hidden" name="CourseID" value={{CourseID}}>
+                                <input type="hidden" name="CourseName" value={{CourseName}}>
+                                <!-- 以上 -->
+                                <button type="submit" class="btn-style-1 offset-lg-4">Cancel</button>
+                            </form>
+                        </td>
+                        </table>
+					</div>
+				</div>
+			</div>               
+        </div>			
+            </div>
+        </div>
+    </section>
+
+    <!-- Scripts -->
+    <script src="static/Form/js/jquery-3.3.1.min.js"></script>
+    <script src="static/Form/js/jquery-ui.js"></script>
+    <script src="static/Form/js/owl.carousel.min.js"></script>
+    <script src="static/Form/js/jquery.counterup.min.js"></script>
+    <script src="static/Form/js/countdown.js"></script>
+    <script src="static/Form/js/stellarnav.min.js"></script>
+    <script src="static/Form/js/imagesloaded.pkgd.min.js"></script>
+    <script src="static/Form/js/isotope.pkgd.min.js"></script>
+    <script src="static/Form/js/jquery.magnific-popup.min.js"></script>
+    <script src="static/Form/js/jquery.scrollUp.js"></script>
+    <script src="static/Form/js/jquery.waypoints.min.js"></script>
+    <script src="static/Form/js/popper.min.js"></script>
+    <script src="static/Form/js/bootstrap.min.js"></script>
+    <script src="static/Form/js/theme.js"></script>
+</body>
+
+</html>
